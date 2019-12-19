@@ -9,7 +9,8 @@ from konlpy.tag import Okt
 import warnings
 warnings.simplefilter(action = "ignore", category = FutureWarning)
 
-path = "C:/Users/yhs25/Downloads/chromedriver_win32/chromedriver.exe"
+#path = "C:/Users/yhs25/Downloads/chromedriver_win32/chromedriver.exe"
+path = "/home/ubuntu/Download/chromedriver"
 
 comment_data = pd.DataFrame({'youtube_id': [],
                              'comment': [],
