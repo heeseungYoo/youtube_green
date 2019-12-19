@@ -10,7 +10,7 @@ import warnings
 warnings.simplefilter(action = "ignore", category = FutureWarning)
 
 #path = "C:/Users/yhs25/Downloads/chromedriver_win32/chromedriver.exe"
-path = "/home/ubuntu/Download/chromedriver"
+path = "/usr/bin/chromedriver"
 
 comment_data = pd.DataFrame({'youtube_id': [],
                              'comment': [],
@@ -44,16 +44,16 @@ while num_page_down:
     time.sleep(1.5)
     num_page_down -= 1
 
-# 이 세개가 다 되는 코드임 - 자동제어 창을 띄어놔야 코드실행이 빨라짐
+
 #browser.find_element_by_xpath('//*[@id="sort-menu"]').click()
 #browser.find_element_by_xpath('//paper-button[@class="dropdown-trigger style-scope yt-dropdown-menu"]').click()
 #browser.find_element_by_xpath('//paper-menu-button[@class="style-scope yt-dropdown-menu"]').click()
-# 반드시 클릭은 해당 클릭할 화면이 보여야 클릭이 가능하다 당연히 제어하는 것이기 때문에
+
 
 #time.sleep(1.5)
 #browser.find_element_by_xpath('//paper-listbox[@class="dropdown-content style-scope yt-dropdown-menu"]/a[1]').click()
 # driver.find_element_by_xpath('//*[@id="menu"]/a[2]/paper-item/paper-item-body/div[text()="최근 날짜순"]').click()
-# 이렇게 직접 텍스트를 지정해줌으로써 클릭하게 할 수 있음 -> 현재는 인기댓글순임
+
 
 num_page_down = 20
 while num_page_down:
@@ -77,7 +77,7 @@ for i in range(len(comment0)):
     #comment_token2 = hannanum.nouns(comment)
     try:
         aa = comment0[i].find('span', {'id': 'vote-count-left'}).text
-        # 정규표현식으로 숫자만 추출하는 것은 정규표현식에 대한 공부를 더 한 뒤 해결
+
         # re.findall('[0-9]',aa)
         # "".join(re.findall('[0-9]',aa)) -> 리스트 내부의 문자열의 합
         like_num = "".join(re.findall('[0-9]', aa)) + "개"
