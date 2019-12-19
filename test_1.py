@@ -9,6 +9,10 @@ from konlpy.tag import Okt
 import warnings
 warnings.simplefilter(action = "ignore", category = FutureWarning)
 
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 #path = "C:/Users/yhs25/Downloads/chromedriver_win32/chromedriver.exe"
 path = "/usr/lib/chromium-browser/chromedriver"
 
