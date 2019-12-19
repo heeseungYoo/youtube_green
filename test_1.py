@@ -10,7 +10,7 @@ import warnings
 warnings.simplefilter(action = "ignore", category = FutureWarning)
 
 #path = "C:/Users/yhs25/Downloads/chromedriver_win32/chromedriver.exe"
-path = "/usr/bin/chromedriver"
+path = "/usr/lib/chromium-browser/chromedriver"
 
 comment_data = pd.DataFrame({'youtube_id': [],
                              'comment': [],
