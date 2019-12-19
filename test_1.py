@@ -26,7 +26,7 @@ comment_data2 = pd.DataFrame({'youtube_id': [],
                              'comment_token':[],
                              'like_num': [],
                              'user_img': []})
-browser = webdriver.Chrome(path)  # chrome_options=options
+browser = webdriver.Chrome(path, chrome_options=chrome_options)
 browser.implicitly_wait(2)
 browser.maximize_window()  # 전체화면이 아니라 최대화하는 방법
 
